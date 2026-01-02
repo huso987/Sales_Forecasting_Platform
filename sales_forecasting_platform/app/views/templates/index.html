@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Forecasting Platform</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.ico">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+        <h1>Sales Forecasting</h1>
+        <p class="subtitle">
+            Generate reliable future sales forecasts using multiple statistical and ML models.
+        </p>
+
+        <div class="features">
+            <div class="feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Multi-model forecasting</span>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Monthly prediction horizon</span>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Automatic email delivery</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+        <div class="card">
+
+            <h2>
+                <i class="fa-solid fa-gear"></i>
+                Configure Forecast
+            </h2>
+            <p class="card-subtitle">
+                Fill in the details below to generate forecasts
+            </p>
+
+            <form method="post" action="/forecast">
+
+                <div class="form-group">
+                    <label>Product Codes</label>
+                    <input name="urunler" placeholder="URUN-1 , URUN-2" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Forecasting Models</label>
+                    <div class="model-grid">
+                        <label class="model-box">
+                            <input type="checkbox" name="models" value="sarima" checked>
+                            <i class="fa-solid fa-chart-line"></i>
+                            SARIMA
+                        </label>
+
+                        <label class="model-box">
+                            <input type="checkbox" name="models" value="hw" checked>
+                            <i class="fa-solid fa-cubes"></i>
+                            Holt-Winters
+                        </label>
+
+                        <label class="model-box">
+                            <input type="checkbox" name="models" value="prophet">
+                            <i class="fa-solid fa-rocket"></i>
+                            Prophet
+                        </label>
+
+                        <label class="model-box">
+                            <input type="checkbox" name="models" value="xgb">
+                            <i class="fa-solid fa-brain"></i>
+                            XGBoost
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Forecast Months</label>
+                        <input type="number" name="months" value="18">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Holdout Months</label>
+                        <input type="number" name="holdout" value="6">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <button class="btn" type="submit">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Generate Forecast
+                </button>
+
+            </form>
+
+            {% if message %}
+            <div class="message">{{ message }}</div>
+            {% endif %}
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
