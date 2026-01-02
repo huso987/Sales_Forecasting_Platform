@@ -1,7 +1,7 @@
 # Sales_Forecasting_Platform
 AI ve istatistiksel zaman serisi modellerini kullanarak ürün bazlı aylık satış tahminleri üreten uçtan uca bir satış tahmin platformu.Bu platform; veri okuma, model eğitimi, değerlendirme, tahmin üretimi ve sonuçların e-posta ile iletilmesini tek bir akışta sunar.
 
-#🚀 Özellikler
+## 🚀 Özellikler
 
 🔢 Ürün Bazlı Tahminleme
 
@@ -23,7 +23,7 @@ AI ve istatistiksel zaman serisi modellerini kullanarak ürün bazlı aylık sat
 
 🧩 Modüler ve Genişletilebilir Mimari
 
-# 🧠 Kullanılan Teknolojiler
+##  🧠 Kullanılan Teknolojiler
 
 Backend: Python, FastAPI
 
@@ -39,7 +39,7 @@ Mail Servisi: SMTP
 
 Output: Excel (xlsx)
 
-# Katmanlar:
+## Katmanlar:
 
 Controller Layer:
 HTTP isteklerini karşılar, doğrulama yapar ve servisleri tetikler.
@@ -56,11 +56,11 @@ Konfigürasyon ve altyapı servislerini içerir (mail, env, path).
 View Layer:
 Kullanıcı arayüzü.
 
-# 📊 Veri Formatı
+## 📊 Veri Formatı
 
 Girdi dosyası (Kaynak_Dosya.txt) aşağıdaki kolonlara sahiptir:
 URUN_KODU;TARIH;MIKTAR
 
-# Arayüz
+## Arayüz
 
 <img width="1870" height="887" alt="image" src="https://github.com/user-attachments/assets/88c48053-5733-4677-966c-05e06955388a" />
