@@ -39,6 +39,19 @@
                 <span>Automatic email delivery</span>
             </div>
         </div>
+        <div class="footer-credit">
+            <span>Built by Hüseyin Doğdu</span>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hüseyindoğdu18/" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/huso987" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- RIGHT PANEL -->
@@ -121,6 +134,31 @@
     </div>
 
 </div>
+<!-- LOADING OVERLAY -->
+<div id="loading-overlay">
+    <div class="loading-card">
+        <div class="spinner"></div>
+        <h3>Processing data...</h3>
+        <p>Training models & sending email</p>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll(".model-box").forEach(box => {
+    const input = box.querySelector("input");
+    if (input.checked) box.classList.add("selected");
+
+    box.addEventListener("click", () => {
+        box.classList.toggle("selected", input.checked);
+    });
+});
+
+const form = document.querySelector("form");
+const overlay = document.getElementById("loading-overlay");
+form.addEventListener("submit", () => {
+overlay.classList.add("active");
+});
+</script>
 
 </body>
 </html>
