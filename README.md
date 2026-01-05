@@ -63,4 +63,5 @@ URUN_KODU;TARIH;MIKTAR
 
 ## Arayüz
 
-<img width="1870" height="887" alt="image" src="https://github.com/user-attachments/assets/88c48053-5733-4677-966c-05e06955388a" />
+![Uploading image.png…]()
+
