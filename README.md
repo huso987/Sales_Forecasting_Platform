@@ -62,6 +62,6 @@ Girdi dosyası (Kaynak_Dosya.txt) aşağıdaki kolonlara sahiptir:
 URUN_KODU;TARIH;MIKTAR
 
 ## Arayüz
+<img width="1860" height="875" alt="image" src="https://github.com/user-attachments/assets/3f4ac5cb-2ab3-4640-bf14-8da594f9c05e" />
 
-![Uploading image.png…]()
 
