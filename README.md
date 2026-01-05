@@ -23,21 +23,6 @@ AI ve istatistiksel zaman serisi modellerini kullanarak ürün bazlı aylık sat
 
 🧩 Modüler ve Genişletilebilir Mimari
 
-##  🧠 Kullanılan Teknolojiler
-
-Backend: Python, FastAPI
-
-Zaman Serisi: statsmodels, Prophet
-
-Makine Öğrenimi: XGBoost, scikit-learn
-
-Veri İşleme: Pandas, NumPy
-
-Frontend: HTML, CSS
-
-Mail Servisi: SMTP
-
-Output: Excel (xlsx)
 
 ## Katmanlar:
 
