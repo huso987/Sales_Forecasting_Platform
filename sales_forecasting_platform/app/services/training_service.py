@@ -1,5 +1,3 @@
-# app/services/training_service.py
-
 from app.models.sarima_model import SarimaModel
 from app.models.hw_model import HoltWintersModel
 from app.models.prophet_model import ProphetModel
@@ -42,3 +40,4 @@ class TrainingService:
                 continue
 
         return results
+
