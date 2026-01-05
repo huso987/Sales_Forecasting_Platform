@@ -1,5 +1,3 @@
-# app/services/forecast_service.py
-
 import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
@@ -72,3 +70,4 @@ class ForecastService:
         wb.save(output_path)
 
         Mailer().send(email, output_path)
+
