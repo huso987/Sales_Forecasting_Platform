@@ -18,7 +18,7 @@ class DataService:
             .asfreq("MS")
         )
 
-        # 🔹 Missing value
+     
         ts["MIKTAR"] = ts["MIKTAR"].interpolate(method="linear")
 
         return ts["MIKTAR"]
@@ -44,4 +44,5 @@ class DataService:
             return series.diff().dropna(), True
 
         return series, False
+
 
