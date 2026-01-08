@@ -19,7 +19,6 @@ class ForecastService:
         all_rows = []
 
         for product in products:
-            # 🔥 BURASI DÜZELTİLDİ
             series = data[data["URUN_KODU"] == product]["MIKTAR"]
 
             if len(series) <= holdout + 2:
@@ -70,4 +69,5 @@ class ForecastService:
         wb.save(output_path)
 
         Mailer().send(email, output_path)
+
 
