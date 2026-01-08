@@ -4,14 +4,10 @@ class EvaluationService:
     def mape(self, y_true, y_pred):
         y_true = np.array(y_true)
         y_pred = np.array(y_pred)
-
-        # Çok küçük gerçek değerler için eşik (örneğin 1e-5)
         epsilon = 1e-5
-
-        # Y_true değeri epsilon'dan büyük olanlar maskesi
+        
         mask = np.abs(y_true) > epsilon
 
-        # Eğer maskeden sonra hiçbir veri kalmazsa sonsuz hata dön
         if mask.sum() == 0:
             return np.inf
 
@@ -20,5 +16,6 @@ class EvaluationService:
         ) * 100
 
         return mape_value
+
 
 
