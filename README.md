@@ -24,6 +24,12 @@ AI ve istatistiksel zaman serisi modellerini kullanarak ürün bazlı aylık sat
 🧩 Modüler ve Genişletilebilir Mimari
 
 
+## 📊 Veri Formatı
+
+Girdi dosyası (Kaynak_Dosya.txt) aşağıdaki kolonlara sahiptir:
+URUN_KODU;TARIH;MIKTAR
+
+
 ## Katmanlar:
 
 Controller Layer:
@@ -41,10 +47,18 @@ Konfigürasyon ve altyapı servislerini içerir (mail, env, path).
 View Layer:
 Kullanıcı arayüzü.
 
-## 📊 Veri Formatı
+## Çağrı Zinciri
+FastAPI Endpoint (ForecastController) 
+    -> ForecastService.run()
+        -> DataService.load()
+        -> TrainingService.train_and_evaluate()
+            -> Model.train()
+            -> Model.predict()
+            -> EvaluationService.mape()
+        -> Mailer.send()
 
-Girdi dosyası (Kaynak_Dosya.txt) aşağıdaki kolonlara sahiptir:
-URUN_KODU;TARIH;MIKTAR
+
+
 
 ## UML Diyagram
 
