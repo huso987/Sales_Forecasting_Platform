@@ -46,6 +46,11 @@ Kullanıcı arayüzü.
 Girdi dosyası (Kaynak_Dosya.txt) aşağıdaki kolonlara sahiptir:
 URUN_KODU;TARIH;MIKTAR
 
+## UML Diyagram
+
+![uml-diyagram](https://github.com/user-attachments/assets/e82fa018-2a5d-4adc-b58b-e5ce30fe1c56)
+
+
 ## Arayüz
 <img width="1860" height="875" alt="image" src="https://github.com/user-attachments/assets/3f4ac5cb-2ab3-4640-bf14-8da594f9c05e" />
 
